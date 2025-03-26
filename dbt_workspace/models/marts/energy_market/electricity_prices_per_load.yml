@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: electricity_prices_per_load
+    description: |
+      Contains data on electricity load from the European Network of Transmission System Operators for Electricity
+      from 2022 to 2025 and is combined with the pricing information of The European Power EXchange. It is used to
+      monitor differences in predicted and actual load.
+    columns:
+      - name: date
+        description: The measured date.
+        tests:
+          - unique
+          - not_null
+      - name: hour
+        description: The measured hour of the day.
+        tests:
+          - not_null
+      - name: forecast_load_kwh
+        description: The forecasted load in KWh.
+        tests:
+          - not_null
+      - name: actual_load_kwh
+        description: The actual load in KWh.
+        tests:
+          - not_null
+      - name: forecast_cost
+        description: The forecasted load multiplied by the price.
+        tests:
+          - not_null
+      - name: actual_cost
+        description: The actual load multiplied by the price.
+        tests:
+          - not_null
