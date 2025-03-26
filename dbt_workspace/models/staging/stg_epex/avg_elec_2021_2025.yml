@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: avg_elec_2021_2025
+    description: |
+      Contains pricing information from the The European Power EXchange from between 2021 and 2025. Level of detail is per date/hour.
+    columns:
+      - name: date
+        description: The date of the calculated price
+      - name: hour
+        description: The hour of the calculated price
+      - name: product_type
+        description: The producttype is electricity.
+      - name: price
+        description: Price in EUR/KWh

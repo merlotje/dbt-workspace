@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: totalload_dayahead_actual_2022
+    description: |
+      Contains data on electricity load across Europe from the European Network of Transmission System Operators for Electricity
+      from 2022. The level of detail is day/15 minute.
+    columns:
+      - name: start_datetime
+        description: The start datetime of the calculated load.
+      - name: end_datetime
+        description: The end datetime of the calculated load.
+      - name: day_ahead_total_load_forecast
+        description: The predicted load for the day in MW.
+      - name: actual_total_load
+        description: The actual measured load in MW.
